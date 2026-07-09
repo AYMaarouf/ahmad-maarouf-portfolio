@@ -1681,31 +1681,41 @@ section {
     .timeline-dot {
         left: 9px;
     }
-   /* Image logo in navbar */
-.logo {
+
+/* Fixed navbar logo size */
+.header .logo {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    max-width: 44px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    position: relative;
+    overflow: visible;
+    font-size: 0;
+    line-height: 1;
+    letter-spacing: 0;
 }
 
-.logo-img {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+.header .logo .logo-img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
     object-fit: cover;
+    border-radius: 10px;
     display: block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.logo:hover .logo-img {
+.header .logo:hover .logo-img {
     transform: scale(1.06);
     box-shadow: 0 0 18px rgba(var(--primary-rgb), 0.45);
 }
-    
-    .timeline-content {
-        padding: 1.5rem;
-    }
+
+.header .logo .logo-tooltip {
+    font-size: 0.8rem;
 }
