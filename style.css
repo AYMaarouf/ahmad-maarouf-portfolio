@@ -1681,103 +1681,73 @@ section {
     .timeline-dot {
         left: 9px;
     }
-
 /* ==========================================================================
-   FIXED RESPONSIVE NAVBAR IMAGE LOGO
+   FINAL FIX: SMALL RESPONSIVE HEADER LOGO
    ========================================================================== */
 
-.header .logo {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    max-width: 42px;
-    min-height: 42px;
-    max-height: 42px;
+.header .nav-container .logo {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
 
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    position: relative;
-    overflow: visible;
+    position: relative !important;
+    overflow: visible !important;
 
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: 0;
-    text-decoration: none;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    letter-spacing: 0 !important;
 }
 
-.header .logo .logo-img {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    max-width: 34px;
-    min-height: 34px;
-    max-height: 34px;
+.header .nav-container .logo img.logo-img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
 
-    display: block;
-    object-fit: contain;
-    border-radius: 9px;
-
-    flex-shrink: 0;
-
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: block !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
 }
 
-.header .logo:hover .logo-img {
+.header .nav-container .logo:hover img.logo-img {
     transform: scale(1.06);
     box-shadow: 0 0 14px rgba(var(--primary-rgb), 0.45);
 }
 
-/* Keep tooltip readable */
-.header .logo .logo-tooltip {
-    font-size: 0.8rem;
-    line-height: 1.2;
+.header .nav-container .logo .logo-tooltip {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
 }
 
-/* Tablet/mobile logo size */
+/* Mobile */
 @media (max-width: 768px) {
-    .header .logo {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        max-width: 40px;
-        min-height: 40px;
-        max-height: 40px;
+    .header .nav-container .logo {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        max-width: 38px !important;
+        min-height: 38px !important;
+        max-height: 38px !important;
     }
 
-    .header .logo .logo-img {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-        max-width: 32px;
-        min-height: 32px;
-        max-height: 32px;
-        border-radius: 8px;
-    }
-}
-
-/* Very small phones */
-@media (max-width: 480px) {
-    .header .logo {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        max-width: 38px;
-        min-height: 38px;
-        max-height: 38px;
-    }
-
-    .header .logo .logo-img {
-        width: 30px;
-        height: 30px;
-        min-width: 30px;
-        max-width: 30px;
-        min-height: 30px;
-        max-height: 30px;
-        border-radius: 8px;
+    .header .nav-container .logo img.logo-img {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+        max-width: 30px !important;
+        min-height: 30px !important;
+        max-height: 30px !important;
     }
 }
