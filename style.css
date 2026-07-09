@@ -464,7 +464,6 @@ section {
     box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.15);
     z-index: 999;
     transition: right var(--transition-smooth);
-    overflow: hidden;
 }
 
 .style-customizer.active {
