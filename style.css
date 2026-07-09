@@ -1548,6 +1548,7 @@ section {
     
     .hero-image-container {
         order: 0;
+        margin-bottom: 1rem;
     }
     
     .hero-description {
@@ -1586,6 +1587,18 @@ section {
         font-size: 2rem;
     }
     
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1.25rem;
+    }
+    
     /* Hamburger Menu Toggle Show */
     .menu-toggle {
         display: flex;
@@ -1601,11 +1614,13 @@ section {
         backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 2.5rem;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        gap: 2rem;
         transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
         border-top: 1px solid var(--border-color);
+        overflow-y: auto;
     }
     
     .navbar.active {
@@ -1624,6 +1639,25 @@ section {
     .hero-subtitle {
         font-size: 1.3rem;
     }
+    
+    .avatar-border {
+        width: 240px;
+        height: 240px;
+    }
+    
+    .avatar-glow {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .floating-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .badge-1 { top: 10px; left: -10px; }
+    .badge-2 { bottom: 30px; right: -15px; }
+    .badge-3 { bottom: -10px; left: 0px; }
     
     .skills-grid {
         grid-template-columns: 1fr;
@@ -1646,6 +1680,18 @@ section {
 }
 
 @media (max-width: 480px) {
+    .card {
+        padding: 1.25rem;
+    }
+    
+    .contact-form-card {
+        padding: 1.25rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
     .hero-title {
         font-size: 2.2rem;
     }
@@ -1653,7 +1699,31 @@ section {
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        gap: 1rem;
     }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .avatar-border {
+        width: 190px;
+        height: 190px;
+    }
+    
+    .avatar-glow {
+        width: 210px;
+        height: 210px;
+    }
+    
+    .floating-badge {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+    }
+    
+    .badge-1 { top: 5px; left: -20px; }
+    .badge-2 { bottom: 20px; right: -25px; }
+    .badge-3 { bottom: -15px; left: -10px; }
     
     .metrics-grid {
         grid-template-columns: 1fr;
@@ -1663,6 +1733,7 @@ section {
     .timeline-tabs {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     
     .tab-btn {
@@ -1671,16 +1742,18 @@ section {
     }
     
     .timeline-item {
-        padding-left: 40px;
+        padding-left: 30px;
     }
     
     .timeline-container::before {
-        left: 15px;
+        left: 10px;
     }
     
     .timeline-dot {
-        left: 9px;
+        left: 4px;
     }
+}
+
 /* ==========================================================================
    FINAL FIX: SMALL RESPONSIVE HEADER LOGO
    ========================================================================== */
@@ -1751,3 +1824,4 @@ section {
         max-height: 30px !important;
     }
 }
+
