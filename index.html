@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="violet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ahmad Yousef Maarouf – Software Developer at MOL Money Over Line, CS Graduate from Rafik Hariri University. Specializing in Web Development, Machine Learning, and OCR systems.">
+    <title>Ahmad Maarouf | Software Developer & CS Graduate</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo" title="Ahmad Maarouf" aria-label="Ahmad Maarouf">AM<span>.</span><span class="logo-tooltip">Ahmad Maarouf</span></a>
+            
+            <nav class="navbar" id="navbar">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Style Customizer Panel -->
+    <div class="style-customizer" id="style-customizer">
+        <button class="customizer-toggle" id="customizer-toggle" aria-label="Customize Style">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <div class="customizer-content">
+            <h4>Customize Accent</h4>
+            <div class="accent-options">
+                <button class="accent-btn violet active" data-accent-val="violet" aria-label="Violet Accent"></button>
+                <button class="accent-btn cyan" data-accent-val="cyan" aria-label="Cyan Accent"></button>
+                <button class="accent-btn emerald" data-accent-val="emerald" aria-label="Emerald Accent"></button>
+                <button class="accent-btn amber" data-accent-val="amber" aria-label="Amber Accent"></button>
+            </div>
+            <p class="customizer-note">Choose your theme colors. Switches live.</p>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="intro-tag">🎓 CS Graduate · Software Developer</span>
+                    <h1 class="hero-title">Hi, I'm <br><span class="gradient-text">Ahmad Maarouf</span></h1>
+                    <h2 class="hero-subtitle">
+                        I build <span id="typewriter" class="accent-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Detail-oriented Computer Science graduate from Rafik Hariri University with hands-on experience in web development, machine learning, and OCR systems. Currently a Software Developer at MOL Money Over Line S.A.L in Lebanon.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-container">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-border">
+                        <img src="assets/profile-avatar.png" alt="Ahmad Maarouf – CS Graduate & Software Developer" class="profile-avatar">
+                    </div>
+                    <div class="floating-badge badge-1"><span>⚛️ React.js</span></div>
+                    <div class="floating-badge badge-2"><span>🐍 Python</span></div>
+                    <div class="floating-badge badge-3"><span>🧠 Machine Learning</span></div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll Down">
+                    <div class="mouse"><div class="wheel"></div></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm Ahmad Yousef Maarouf, a Computer Science graduate from Rafik Hariri University (July 2024), based in Chouefiet, Beirut, Lebanon. My academic foundation spans web development, data analysis, and machine learning.
+                        </p>
+                        <p>
+                            I'm currently working as a Software Developer at MOL Money Over Line S.A.L, a Lebanese financial services and money transfer company, where I develop document digitization software, attendance tracking systems, and cutting-edge OCR-based applications.
+                        </p>
+                        <p>
+                            I also have freelance experience building full eCommerce platforms on WordPress and WooCommerce, as well as crafting modern web apps with React.js.
+                        </p>
+                        <div class="languages-row">
+                            <div class="lang-badge">
+                                <span class="lang-name">Arabic</span>
+                                <span class="lang-level native">Native</span>
+                            </div>
+                            <div class="lang-badge">
+                                <span class="lang-name">English</span>
+                                <span class="lang-level fluent">Fluent</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-details">
+                        <h3>What I Do</h3>
+                        <div class="focus-list">
+                            <div class="focus-item">
+                                <div class="focus-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Web Development</h4>
+                                    <p>Designing and developing responsive, user-friendly web interfaces using React.js, PHP, HTML, CSS, and Bootstrap.</p>
+                                </div>
+                            </div>
+                            <div class="focus-item">
+                                <div class="focus-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Machine Learning</h4>
+                                    <p>Building and implementing ML models to solve complex problems and derive meaningful insights from data using Python.</p>
+                                </div>
+                            </div>
+                            <div class="focus-item">
+                                <div class="focus-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                                </div>
+                                <div>
+                                    <h4>OCR & Document Systems</h4>
+                                    <p>Developing OCR-based applications to automatically read and process data from IDs, passports, and official documents.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cisco Certificate Badge -->
+                        <div class="cert-badge card">
+                            <div class="cert-icon">🏅</div>
+                            <div class="cert-info">
+                                <strong>Cisco IT-Essentials Certificate</strong>
+                                <span>Cisco Packet Tracer · April 2024</span>
+                                <p>Networking, OS, security & hardware configuration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIENCE & EDUCATION ==================== -->
+        <section id="experience" class="experience-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Journey</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="timeline-tabs">
+                    <button class="tab-btn active" data-tab="work">Work Experience</button>
+                    <button class="tab-btn" data-tab="education">Education</button>
+                </div>
+                
+                <!-- WORK EXPERIENCE -->
+                <div class="timeline-container work-timeline active" id="work-tab">
+                    
+                    <!-- MOL -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">August 2025 – Present</span>
+                            <h3>Software Developer</h3>
+                            <h4 class="company-name">MOL Money Over Line S.A.L · Beirut, Lebanon</h4>
+                            <p class="timeline-desc">Working at a Lebanese financial services and money transfer company similar to Whish Money and OMT, building internal software systems to streamline operations and digitize workflows.</p>
+                            <ul class="timeline-details">
+                                <li>Developed <strong>archiving software</strong> to digitize and organize company documents, replacing manual paper-based processes.</li>
+                                <li>Built an <strong>employee attendance tracking system</strong> to improve time management and HR reporting.</li>
+                                <li>Currently developing the company's main <strong>OCR-based application</strong> to automatically read and extract data from IDs, passports, and official documents.</li>
+                            </ul>
+                            <button class="btn-detail-toggle">Show Details</button>
+                        </div>
+                    </div>
+                    
+                    <!-- 7ala Cosmetics -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Freelance</span>
+                            <h3>WordPress Developer</h3>
+                            <h4 class="company-name">7ala Cosmetics · 7alacosmetics.com</h4>
+                            <p class="timeline-desc">Independently built and managed the full eCommerce website for a cosmetics brand, integrating a large product catalog and ensuring seamless performance.</p>
+                            <ul class="timeline-details">
+                                <li>Built and managed <strong>7alacosmetics.com</strong> using WordPress and WooCommerce.</li>
+                                <li>Integrated a catalog of <strong>3,000+ products</strong> into the platform.</li>
+                                <li>Optimized site performance and implemented <strong>SEO strategies</strong>.</li>
+                                <li>Automated product image updates via API integration.</li>
+                                <li>Ensured a seamless user experience with responsive design and ongoing maintenance.</li>
+                            </ul>
+                            <button class="btn-detail-toggle">Show Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- EDUCATION -->
+                <div class="timeline-container education-timeline" id="education-tab">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">Graduated July 2024</span>
+                            <h3>Bachelor of Science in Computer Science</h3>
+                            <h4 class="company-name">Rafik Hariri University · Meshref, Lebanon</h4>
+                            <p class="timeline-desc">Earned a Bachelor of Arts and Science (B.Sc.) in Computer Science with a solid foundation across software engineering, data structures, algorithms, databases, and machine learning.</p>
+                            <ul class="timeline-details">
+                                <li>Core coursework in <strong>Data Structures, Algorithms, and Database Systems</strong>.</li>
+                                <li>Studied <strong>Machine Learning and AI</strong> fundamentals and practical model building.</li>
+                                <li>Completed a <strong>Web Development</strong> track covering full-stack technologies.</li>
+                                <li>Collaborated in team-based software engineering projects using Agile methodologies.</li>
+                            </ul>
+                            <button class="btn-detail-toggle">Show Details</button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card">
+                            <span class="time-period">April 2024</span>
+                            <h3>Cisco IT-Essentials Certificate</h3>
+                            <h4 class="company-name">Cisco · Cisco Packet Tracer</h4>
+                            <p class="timeline-desc">Completed Cisco's IT Essentials certification covering hardware, operating systems, networking, and security.</p>
+                            <ul class="timeline-details">
+                                <li>In-depth practical experience assembling, configuring, and troubleshooting computers.</li>
+                                <li>Strong understanding of <strong>networking protocols and security principles</strong>.</li>
+                                <li>Hands-on labs using <strong>Cisco Packet Tracer</strong> for network simulation.</li>
+                            </ul>
+                            <button class="btn-detail-toggle">Show Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category-card card">
+                        <div class="skill-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span>HTML / CSS</span><span>90%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>JavaScript</span><span>82%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:82%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>React.js</span><span>85%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>Bootstrap</span><span>88%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-category-card card">
+                        <div class="skill-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6" y1="6" y2="6"/><line x1="6" x2="6" y1="18" y2="18"/></svg>
+                            <h3>Backend & Data</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span>PHP</span><span>80%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>Python</span><span>85%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>Flask</span><span>78%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>Machine Learning</span><span>75%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="skill-category-card card">
+                        <div class="skill-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span>WordPress / WooCommerce</span><span>90%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>GitHub / Version Control</span><span>85%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>Visual Studio / VS Code</span><span>88%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span>OCR Systems</span><span>72%</span></div>
+                                <div class="skill-bar-bg"><div class="skill-bar-fill" style="width:72%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Pills -->
+                <div class="tech-pills-row">
+                    <span class="tech-pill">HTML</span>
+                    <span class="tech-pill">CSS</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">React.js</span>
+                    <span class="tech-pill">PHP</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Flask</span>
+                    <span class="tech-pill">Bootstrap</span>
+                    <span class="tech-pill">WordPress</span>
+                    <span class="tech-pill">WooCommerce</span>
+                    <span class="tech-pill">GitHub</span>
+                    <span class="tech-pill">Machine Learning</span>
+                    <span class="tech-pill">OCR</span>
+                    <span class="tech-pill">Cisco Networking</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS ==================== -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="ecommerce">eCommerce</button>
+                    <button class="filter-btn" data-filter="system">Systems</button>
+                </div>
+                
+                <div class="projects-grid">
+
+                    <!-- Project 1: Sushi Bom -->
+                    <div class="project-card card" data-category="web">
+                        <div class="project-image-box">
+                            <img src="assets/project-web.png" alt="SushiBom React App">
+                            <div class="project-hover-overlay">
+                                <div class="project-links">
+                                    <a href="https://sushibom.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Live Demo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Web App · Live</span>
+                            <h3>SushiBom 🍣</h3>
+                            <p>A modern, fully interactive web application built from the ground up with React.js. Features a clean restaurant-style UI, smooth navigation, and dynamic content rendering. Deployed live on Vercel.</p>
+                            <div class="project-tech-tags">
+                                <span>React.js</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
+                                <span>Vercel</span>
+                            </div>
+                            <a href="https://sushibom.vercel.app" target="_blank" rel="noopener noreferrer" class="project-live-link">🔗 sushibom.vercel.app</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: 7ala Cosmetics -->
+                    <div class="project-card card" data-category="ecommerce">
+                        <div class="project-image-box">
+                            <img src="assets/project-mobile.png" alt="7ala Cosmetics eCommerce">
+                            <div class="project-hover-overlay">
+                                <div class="project-links">
+                                    <a href="https://7alacosmetics.com" target="_blank" rel="noopener noreferrer" aria-label="Live Site">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">eCommerce · Freelance</span>
+                            <h3>7ala Cosmetics 💄</h3>
+                            <p>Full eCommerce website for a Lebanese cosmetics brand. Built with WordPress and WooCommerce, featuring 3,000+ products, API-driven image automation, performance optimization, and SEO strategies.</p>
+                            <div class="project-tech-tags">
+                                <span>WordPress</span>
+                                <span>WooCommerce</span>
+                                <span>SEO</span>
+                                <span>API</span>
+                            </div>
+                            <a href="https://7alacosmetics.com" target="_blank" rel="noopener noreferrer" class="project-live-link">🔗 7alacosmetics.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: MOL OCR System -->
+                    <div class="project-card card" data-category="system">
+                        <div class="project-image-box">
+                            <img src="assets/project-ai.png" alt="MOL OCR System">
+                            <div class="project-hover-overlay">
+                                <div class="project-links">
+                                    <a href="#" aria-label="Private System">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-tag">Enterprise System · MOL S.A.L</span>
+                            <h3>OCR Document Processor 🪪</h3>
+                            <p>An intelligent OCR-based system being built at MOL Money Over Line to automatically extract and process data from IDs, passports, and official documents. Includes archiving and employee attendance modules.</p>
+                            <div class="project-tech-tags">
+                                <span>Python</span>
+                                <span>OCR</span>
+                                <span>PHP</span>
+                                <span>Document AI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-card card">
+                        <h3>Contact Info</h3>
+                        <p>Available for job opportunities, freelance projects, or just a chat about technology.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div>
+                                    <span>Email</span>
+                                    <a href="mailto:maaroufay@gmail.com">maaroufay@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div>
+                                    <span>Phone</span>
+                                    <a href="tel:+96181299869">+961 81 299 869</a>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                </div>
+                                <div>
+                                    <span>Location</span>
+                                    <span>Chouefiet, Beirut, Lebanon</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ahmad-maarouf-a01079342/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="https://sushibom.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Project">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </a>
+                            <a href="https://7alacosmetics.com" target="_blank" rel="noopener noreferrer" aria-label="7ala Cosmetics">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-card card">
+                        <form id="contact-form" autocomplete="off" novalidate>
+                            <div class="form-row">
+                                <div class="form-group floating-input-group">
+                                    <input type="text" id="name" name="name" required placeholder=" ">
+                                    <label for="name">Your Name</label>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="form-group floating-input-group">
+                                    <input type="email" id="email" name="email" required placeholder=" ">
+                                    <label for="email">Your Email</label>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="form-group floating-input-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                                <span class="focus-border"></span>
+                            </div>
+                            <div class="form-group floating-input-group">
+                                <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="focus-border"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-spinner hidden"></span>
+                            </button>
+                            <div id="form-feedback" class="form-feedback hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-content">
+            <p>&copy; 2025 Ahmad Yousef Maarouf · Chouefiet, Beirut, Lebanon</p>
+            <p class="footer-custom-tag">Built with ❤️ · CS Graduate, Rafik Hariri University</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK (sends email directly from browser via Gmail SMTP, no backend needed) -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
