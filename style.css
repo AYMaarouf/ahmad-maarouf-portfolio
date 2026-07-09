@@ -1681,6 +1681,29 @@ section {
     .timeline-dot {
         left: 9px;
     }
+   /* Image logo in navbar */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px rgba(var(--primary-rgb), 0.45);
+}
     
     .timeline-content {
         padding: 1.5rem;
