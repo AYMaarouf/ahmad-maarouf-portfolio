@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnSpinner.classList.add('hidden');
                 submitBtn.disabled = false;
                 feedbackBanner.textContent =
-                    `❌ Failed to send (${error.text || 'network error'}). Please email maaroufay@gmail.com directly.`;
+                    `❌ Failed to send (${error.text || 'network error'}). Please email ahmanato789@gmail.com directly.`;
                 feedbackBanner.className = 'form-feedback error';
             }
         });
